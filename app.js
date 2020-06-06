@@ -6,6 +6,8 @@ const bodyParser = require('body-parser');
 
 const indexRouter = require('./routes/index');
 const questionRouter = require('./routes/question');
+const categoryRouter = require('./routes/category');
+const showRouter = require('./routes/show');
 
 const app = express();
 
@@ -21,6 +23,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 // ROUTES
 app.use('/', indexRouter);
 app.use('/question', questionRouter);
+app.use('/category', categoryRouter);
+app.use('/show', showRouter);
 
 module.exports = app;
 
