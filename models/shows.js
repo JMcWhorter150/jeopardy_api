@@ -1,11 +1,11 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Shows = sequelize.define('Shows', {
-    show_number: DataTypes.INTEGER,
-    air_date: DataTypes.STRING
+    showNumber: DataTypes.INTEGER,
+    airDate: DataTypes.STRING
   }, {});
   Shows.associate = function(models) {
-    // associations can be defined here
+    Shows.hasMany(models.Questions);
   };
   return Shows;
 };

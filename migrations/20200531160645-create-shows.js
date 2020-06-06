@@ -12,7 +12,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       airDate: {
-        type: Sequelize.STRING
+        type: Sequelize.DATE
       },
       createdAt: {
         allowNull: false,
